@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".OnboardingScreen">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="202dp"
+        android:layout_height="200.84dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="Привет"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="Добро пожаловать в страну\nвосходящего солнца."
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="321dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="goToSignIn"
+        android:text="Войти в аккаунт"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>

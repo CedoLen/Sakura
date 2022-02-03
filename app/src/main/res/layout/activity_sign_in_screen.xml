@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundfirst"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".SignInScreen">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50.76dp"
+        android:layout_height="50.79dp"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Вход" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Почта"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="321dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Войти"
+        android:textColor="@color/white" />
+</LinearLayout>
