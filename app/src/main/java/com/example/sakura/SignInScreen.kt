@@ -1,5 +1,6 @@
 package com.example.sakura
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
@@ -18,7 +19,7 @@ class SignInScreen : AppCompatActivity() {
 
         email = findViewById(R.id.editTextEmailAddress)
         password= findViewById(R.id.editTextPassword)
-        pattern = "/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}\$/i"
+        pattern = "[a-z]{1,25}"+"\\@[a-z]{1,10}"+"\\.[a-z]{2,4}"
     }
 
     fun EmailValid(email:String):Boolean{ return compile(pattern).matcher(email).matches()}
@@ -28,7 +29,8 @@ class SignInScreen : AppCompatActivity() {
         {
             if(EmailValid(email.text.toString()))
             {
-
+                val intent= Intent(this,MenuScreen::class.java)
+                startActivity(intent)
             }
             else
             {
