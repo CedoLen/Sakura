@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sakura">
         <activity
+            android:name=".MenuScreen"
+            android:exported="false"
+            android:label="@string/title_activity_menu_screen" />
+        <activity
             android:name=".SignInScreen"
             android:exported="false" />
         <activity
