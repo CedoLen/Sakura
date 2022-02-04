@@ -8,8 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.example.sakura.R
+import com.example.sakura.adapters.FirstAdapter
 import com.example.sakura.databinding.FragmentHomeBinding
+import com.example.sakura.feel
 
 class HomeFragment : Fragment() {
 
@@ -24,10 +27,22 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val data=listOf(
+            feel("Спокойным",R.drawable.lotos),
+            feel("Расслабленным",R.drawable.lotos),
+            feel("Сосредоточеным",R.drawable.lotos),
+            feel("Взволнованным",R.drawable.lotos),
+            feel("Спокойным",R.drawable.lotos),
+            feel("Расслабленным",R.drawable.lotos),
+            feel("Сосредоточеным",R.drawable.lotos),
+            feel("Взволнованным",R.drawable.lotos)
+        )
+
+        val recyclerView:RecyclerView = root.findViewById(R.id.feel_recycler)
+        recyclerView.adapter = FirstAdapter(requireContext(),data)
 
         return root
     }
