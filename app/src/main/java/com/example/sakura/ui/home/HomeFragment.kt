@@ -31,14 +31,14 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         val data=listOf(
-            feel("Спокойным",R.drawable.lotos),
-            feel("Расслабленным",R.drawable.lotos),
-            feel("Сосредоточеным",R.drawable.lotos),
-            feel("Взволнованным",R.drawable.lotos),
-            feel("Спокойным",R.drawable.lotos),
-            feel("Расслабленным",R.drawable.lotos),
-            feel("Сосредоточеным",R.drawable.lotos),
-            feel("Взволнованным",R.drawable.lotos)
+            feel("Спокоен",R.drawable.lotos),
+            feel("Расслаблен",R.drawable.lotos),
+            feel("Сосредоточен",R.drawable.lotos),
+            feel("Взволнован",R.drawable.lotos),
+            feel("Спокоен",R.drawable.lotos),
+            feel("Расслаблен",R.drawable.lotos),
+            feel("Сосредоточен",R.drawable.lotos),
+            feel("Взволнован",R.drawable.lotos)
         )
 
         val recyclerView:RecyclerView = root.findViewById(R.id.feel_recycler)
