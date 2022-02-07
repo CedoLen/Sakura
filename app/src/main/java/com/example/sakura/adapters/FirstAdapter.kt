@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.sakura.Network.feelings
 import com.example.sakura.R
 import com.example.sakura.feel
 
-class FirstAdapter(val context: Context, val list:List<feel>):
+class FirstAdapter(val context: Context, val list:feelings):
     RecyclerView.Adapter<FirstAdapter.MyVH>()
 {
     class MyVH(itemView:View):RecyclerView.ViewHolder(itemView) {
@@ -24,10 +26,10 @@ class FirstAdapter(val context: Context, val list:List<feel>):
     }
 
     override fun onBindViewHolder(holder: MyVH, position: Int) {
-        holder.imageView.setImageDrawable(context.getDrawable(list[position].image))
-        holder.textView.text=list[position].title
+        Glide.with(context).load(list.data[position].image).into(holder.imageView)
+        holder.textView.text=list.data[position].title
     }
     override fun getItemCount(): Int {
-        return list.size
+        return list.data.size
     }
 }
