@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sakura.Network.MyInterface
 import com.example.sakura.Network.MyRetrofit
 import com.example.sakura.Network.feelings
+import com.example.sakura.Network.quotes
 import com.example.sakura.R
 import com.example.sakura.adapters.FirstAdapter
+import com.example.sakura.adapters.stateAdapter
 import com.example.sakura.databinding.FragmentHomeBinding
 import com.example.sakura.feel
 import retrofit2.Call
@@ -42,11 +44,28 @@ class HomeFragment : Fragment() {
         val call = inter.getFeelings()
             .enqueue(object : retrofit2.Callback<feelings> {
                 override fun onResponse(call: Call<feelings>, response: Response<feelings>) {
-                    recyclerView.adapter = FirstAdapter(requireContext(), response.body()!!)
+                    if (response.isSuccessful) {
+                        recyclerView.adapter = FirstAdapter(requireContext(), response.body()!!)
+                    }
                 }
 
                 override fun onFailure(call: Call<feelings>, t: Throwable) {
                     Toast.makeText(requireContext(), t.localizedMessage, Toast.LENGTH_SHORT).show()
+                }
+
+            })
+
+        val recyclerView2:RecyclerView = root.findViewById(R.id.state_recycler)
+        val call2=inter.getQuotes()
+            .enqueue(object :retrofit2.Callback<quotes>{
+                override fun onResponse(call: Call<quotes>, response: Response<quotes>) {
+                    if (response.isSuccessful) {
+                        recyclerView2.adapter = stateAdapter(requireContext(), response.body()!!)
+                    }
+                }
+
+                override fun onFailure(call: Call<quotes>, t: Throwable) {
+                    Toast.makeText(requireContext(),t.localizedMessage,Toast.LENGTH_SHORT).show()
                 }
 
             })

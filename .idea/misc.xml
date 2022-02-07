@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/drawable/button_shape.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/drawable/item_shape.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/drawable/item_shape2.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/activity_main_screen.xml" value="0.2609375" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/activity_menu_screen.xml" value="0.275" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/fragment_dashboard.xml" value="0.275" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/fragment_home.xml" value="0.31712962962962965" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/fragment_notifications.xml" value="0.275" />
+        <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/layout/state_adapter.xml" value="0.275" />
         <entry key="..\:/Users/Lena/Desktop/progects/AndrStudio/Sakura/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2611111111111111" />
       </map>
     </option>

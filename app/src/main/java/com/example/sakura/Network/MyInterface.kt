@@ -10,4 +10,6 @@ interface MyInterface {
     fun getLogin(@Body hashMap: HashMap<String,String>):Call<login>
     @GET("feelings")
     fun getFeelings():Call<feelings>
+    @GET("quotes")
+    fun getQuotes():Call<quotes>
 }
